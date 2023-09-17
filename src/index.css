@@ -1,13 +1,114 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App{
+  max-width: 600px;
+  margin: auto;
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  background-color: blue;
+  color: white;
+}
+
+.header h1{
+  margin: 0;
+  padding: 10px;
+}
+
+.redbut{
+  background-color: red !important;
+  color: white !important;
+}
+
+.header button{
+  border-radius: 20px;
+  padding: 1px 15px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.tasks{
+  border: 2px solid blue;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.task{
+  border: 3px solid grey;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.icondiv{
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.task h3{
+  margin: 0;
+}
+
+.buttontog{
+  display: none;
+}
+
+.task p{
+  margin: 0;
+}
+
+.reminder{
+  border-left: 8px solid red;
+}
+
+.formarea{
+  margin: 20px 0;
+}
+
+form{
+display: block;
+}
+
+form input{
+    width: 100%;
+    margin-bottom: 8px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid rgb(31, 24, 61);
+    font-size: 15px;
+  }
+
+  form input:last-of-type{
+    background-color: lemonchiffon;
+  }
+
+  form input:focus{
+    border: 3px solid green;
+    outline: green;
+  }
+
+  .formcontrol{
+    display: flex;
+    justify-content: space-between;
+  }
+   
+  .formcontrol label{
+    padding: 10px;
+  }
