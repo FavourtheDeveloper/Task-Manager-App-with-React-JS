@@ -1,10 +1,11 @@
 import React from 'react'
+import Button from './Button'
 
 const Header = ({togbut, button}) => {
   return (
     <div className='header'>
         <h1>Task Manager</h1>
-        <button className={`${!button ? 'redbut' : ""}`} onClick={togbut}>{button ? "Add New" : "Close"}</button>
+       <Button button={button} togbut={togbut} />
     </div>
   )
 }

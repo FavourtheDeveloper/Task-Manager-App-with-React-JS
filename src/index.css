@@ -46,7 +46,6 @@ code {
 
 .tasks{
   border: 2px solid blue;
-  margin-top: 10px;
   padding: 20px;
 }
 
@@ -80,6 +79,9 @@ code {
 
 .formarea{
   margin: 20px 0;
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
 }
 
 form{
@@ -111,4 +113,11 @@ form input{
    
   .formcontrol label{
     padding: 10px;
+  }
+
+  footer{
+    text-align: center;
+    background-color: blue;
+    padding: 5px;
+    color: white;
   }

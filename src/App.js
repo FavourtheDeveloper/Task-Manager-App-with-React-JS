@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Addform from "./components/Addform";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import Footer from './components/Footer';
 function App() {
 
   const [tasks, setTask] = useState([
@@ -26,11 +27,9 @@ function App() {
 ]
 )
 
-const [button, setButton] = useState(false)
+const [button, setButton] = useState(true)
 
-const [title, setTitle] = useState("")
-const [text, setText] = useState("")
-const [reminder, setReminder] = useState(false)
+
 
 const deleteTask = (id) => {
   setTask(
@@ -53,10 +52,11 @@ const togbut = () => {
   return (
     <div className="App">
       <Header togbut={togbut} button={button} />
-      <Addform title={title} text={text} reminder={reminder} button={button}  />
+      <Addform button={button}  />
       <Tasks tasks={tasks}
        onToggle={toggleReminder}
        deleteevent={deleteTask} />
+       <Footer text="FavourtheDev" />
     </div>
   );
 }
