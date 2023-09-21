@@ -1,13 +1,40 @@
 import { useState } from "react";
 
-const Addform = ({ button }) => {
+const Addform = ({ button, addTask, tasks, setTask }) => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [reminder, setReminder] = useState(false);
 
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+    let error = ""
+
+    if(!title) {
+      error += "Please enter a Title";
+    }
+
+    if(!text) {
+      error += "Please enter a Text";
+    }
+
+    if(error) {
+     alert(error)
+    }
+   
+    addTask(title, text, reminder);
+
+    setTitle('')
+    setText('')
+    setReminder(false)
+    
+   
+
+  }
+
   return (
     <div className={`formarea ${button ? "buttontog" : ""}`}>
-      <form>
+      <form onSubmit={onSubmit}>
         <input
           type="text"
           name="title"
@@ -30,6 +57,7 @@ const Addform = ({ button }) => {
             type="checkbox"
             name="reminder"
             id="reminder"
+            checked={reminder}
             value={reminder}
             onChange={(e) => setReminder(e.currentTarget.checked)}
           />

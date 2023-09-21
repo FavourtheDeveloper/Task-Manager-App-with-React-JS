@@ -30,6 +30,18 @@ function App() {
 const [button, setButton] = useState(true)
 
 
+const addTask = (title, text, reminder) => {
+  let randid = Math.round(Math.random() * 100)
+
+  setTask([...tasks, {
+      id: randid,
+      title: title,
+      time: text,
+      reminder: reminder
+  }])
+}
+
+
 
 const deleteTask = (id) => {
   setTask(
@@ -52,7 +64,7 @@ const togbut = () => {
   return (
     <div className="App">
       <Header togbut={togbut} button={button} />
-      <Addform button={button}  />
+      <Addform button={button} addTask={addTask} tasks={tasks} setTask={setTask} />
       <Tasks tasks={tasks}
        onToggle={toggleReminder}
        deleteevent={deleteTask} />
