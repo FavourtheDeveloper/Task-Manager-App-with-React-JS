@@ -33,6 +33,8 @@ const [button, setButton] = useState(true)
 const addTask = (title, text, reminder) => {
   let randid = Math.round(Math.random() * 100)
 
+  tasks.forEach((task) => {if(task.id == randid) {alert("same id"); randid = Math.round(Math.random() * 100)}})
+
   setTask([...tasks, {
       id: randid,
       title: title,

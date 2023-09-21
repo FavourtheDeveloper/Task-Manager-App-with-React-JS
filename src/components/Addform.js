@@ -20,7 +20,9 @@ const Addform = ({ button, addTask, tasks, setTask }) => {
 
     if(error) {
      alert(error)
-    }
+    } else {
+
+    
    
     addTask(title, text, reminder);
 
@@ -29,7 +31,7 @@ const Addform = ({ button, addTask, tasks, setTask }) => {
     setReminder(false)
     
    
-
+    }
   }
 
   return (
